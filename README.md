@@ -23,11 +23,11 @@ O portfólio foi construído utilizando as seguintes tecnologias:
 * **Seção "Habilidades":** Lista das minhas competências técnicas.
 * **Formulário de Contato:** Uma forma simples para visitantes entrarem em contato comigo.
 
-## 🌐 Acesse o Portfólio Online
+<!-- ## 🌐 Acesse o Portfólio Online
 
 O portfólio está hospedado e disponível para visualização no link abaixo.
 
-🔗 **https://github.com/Gabriel-Dee/Portfolio**
+🔗 **https://github.com/Gabriel-Dee/Portfolio** -->
 
 ## 💻 Como Executar o Projeto Localmente
 
