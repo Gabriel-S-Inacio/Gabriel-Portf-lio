@@ -1,0 +1,550 @@
+/* --- Reset básico --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Variáveis CSS para temas (Dark/Light Mode) --- */
+:root {
+    /* Cores do Modo Escuro (padrão) */
+    --cor-fundo-principal: rgb(18, 18, 18);
+    --cor-fundo-secundario: #1c1c1c;
+    --cor-borda: #2e2e2e;
+    --cor-texto-principal: rgb(240, 240, 240);
+    --cor-texto-secundario: #888;
+    --cor-destaque: rgb(30, 144, 255);
+    --cor-destaque-hover: #63b3ff;
+    --cor-tag-bg: var(--cor-destaque);
+    --cor-tag-text: var(--cor-fundo-principal);
+}
+
+body.light-mode {
+    /* Cores do Modo Claro */
+    --cor-fundo-principal: rgb(245, 245, 245);
+    --cor-fundo-secundario: rgb(255, 255, 255);
+    --cor-borda: rgb(220, 220, 220);
+    --cor-texto-principal: rgb(30, 30, 30);
+    --cor-texto-secundario: rgb(100, 100, 100);
+    --cor-destaque: rgb(0, 100, 200);
+    --cor-destaque-hover: rgb(0, 150, 255);
+    --cor-tag-bg: var(--cor-destaque);
+    --cor-tag-text: rgb(255, 255, 255); 
+}
+
+/* --- Estilos Globais --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+    transition: background-color 0.5s ease, color 0.5s ease; /* Transição suave entre temas */
+}
+
+a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--cor-destaque-hover);
+    text-decoration: underline;
+}
+
+/* --- Botão de Tema --- */
+#toggleTema {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 6px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--cor-fundo-secundario);
+    color: var(--cor-texto-principal);
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#toggleTema:hover {
+    background-color: var(--cor-borda);
+    transform: translateY(-2px);
+}
+
+/* --- Navegação --- */
+header {
+    background-color: var(--cor-fundo-secundario);
+    padding: 20px 0;
+    border-bottom: 1px solid var(--cor-borda);
+    position: relative; 
+}
+
+nav {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav h1 {
+    color: var(--cor-destaque);
+    font-size: 1.6rem;
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--gap-padrao, 20px);
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    font-weight: bold;
+    padding: 5px 0;
+    display: block;
+}
+
+/* --- Seção de Apresentação --- */
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 10%;
+    background-color: var(--cor-fundo-principal);
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/*.foto-container {
+     Pode ser útil para posicionamento futuro, mas a imagem já tem a borda 
+} */
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--cor-destaque);
+    cursor: pointer;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.4);
+}
+
+.foto-perfil:hover {
+    transform: scale(1.07);
+    border-color: var(--cor-destaque-hover);
+}
+
+.intro {
+    max-width: 600px;
+    text-align: left;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--cor-destaque);
+}
+
+.intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+#saudacaoMensagem {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--cor-texto-secundario);
+    font-style: italic;
+}
+
+/* --- Estilos Gerais de Seções --- */
+section {
+    padding: var(--padding-secao, 40px 10%);
+    max-width: 1200px;
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: var(--cor-destaque);
+    margin-bottom: 25px;
+    font-size: 2rem;
+    border-left: 5px solid var(--cor-destaque);
+    padding-left: 15px;
+    position: relative;
+}
+
+/* --- Cards --- */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    padding: 25px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    background-color: #252525;
+}
+
+body.light-mode .card:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+
+.card h3 {
+    margin-bottom: 12px;
+    color: var(--cor-destaque);
+    font-size: 1.4rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--cor-destaque);
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card .tecnologias {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.card .tecnologias span {
+    background-color: var(--cor-tag-bg);
+    color: var(--cor-tag-text);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+
+/* --- Contato --- */
+#contato p {
+    margin-bottom: 10px;
+    font-size: 1.05rem;
+}
+
+#contato p a {
+    font-weight: normal;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--cor-fundo-secundario);
+    text-align: center;
+    padding: 25px;
+    font-size: 0.85rem;
+    color: var(--cor-texto-secundario);
+    border-top: 1px solid var(--cor-borda);
+    margin-top: 60px;
+}
+
+/* --- Modal da Imagem de Perfil --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.modal-inner {
+    position: relative;
+    margin: 5% auto; 
+    width: 90%;
+    max-width: 450px;
+    max-height: 90vh;
+    background-color: var(--cor-fundo-secundario);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    padding-bottom: 20px; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px 12px 0 0;
+    object-fit: contain;
+    max-height: 80vh;
+}
+
+.modal-caption {
+    color: var(--cor-texto-principal);
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 15px 20px 0;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    transform: scale(1.1);
+}
+
+/* --- Animação de aparição ao rolar --- */
+
+.oculto {
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+
+.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsividade --- */
+@media (max-width: 992px) { 
+    .apresentacao {
+        padding: 50px 8%;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .foto-perfil {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 20px;
+    }
+
+    .intro {
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav h1 {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    section {
+        padding: 30px 8%;
+        margin-bottom: 30px;
+    }
+
+    .projetos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    #toggleTema {
+        position: static;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 576px) { 
+    nav h1 {
+        font-size: 1.4rem;
+    }
+
+    .intro h2 {
+        font-size: 2rem;
+    }
+
+    .intro p {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+        padding-left: 10px;
+        border-left: 4px solid var(--cor-destaque);
+    }
+
+    .foto-perfil {
+        width: 140px;
+        height: 140px;
+    }
+
+    .card h3 {
+        font-size: 1.25rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card .tecnologias span {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+
+    #toggleTema {
+        font-size: 0.85rem;
+        padding: 6px 10px;
+    }
+}
+
+/* --- Cards Flutuantes --- */
+.floating-card {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 280px;
+    padding: 20px;
+    background-color: var(--cor-fundo-secundario);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    /* display: block; */
+    opacity: 0; /* Inicia invisível */
+    visibility: hidden; /* Garante que não é clicável quando invisível */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease, visibility 0.3s ease; /* Adiciona visibility à transição */
+}
+
+/* Classe para o card ativo/visível */
+.floating-card.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilo para a imagem dentro do card */
+.floating-card img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.floating-card h3 {
+    color: var(--cor-destaque);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.floating-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--cor-texto-principal);
+}
+
+/* Posicionamento do card da Esquerda */
+.left-card {
+    left: 20px;
+}
+.left-card.is-active {
+    transform: translateY(-50%) translateX(0);
+}
+.left-card:hover {
+    transform: translateY(-50%) translateX(5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Posicionamento do card da Direita */
+.right-card {
+    right: 20px;
+}
+.right-card.is-active { 
+    transform: translateY(-50%) translateX(0);
+}
+.right-card:hover {
+    transform: translateY(-50%) translateX(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo para o botão de fechar */
+.close-card {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: var(--cor-texto-principal);
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-card:hover {
+    color: var(--cor-destaque);
+}
+
+/* Responsividade para Cards Flutuantes */
+@media (max-width: 1200px) { /* Esconde os cards em telas menores que 1200px */
+    .floating-card {
+        display: none !important; /* Força a ocultação em telas menores */
+        opacity: 0;
+        visibility: hidden;
+    }
+}

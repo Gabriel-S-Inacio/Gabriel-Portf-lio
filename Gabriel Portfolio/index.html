@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gabriel Santos Inácio | Desenvolvedor | Portfólio</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!--Botões de interação no cabeçalho da pagina-->
+    <header>
+        <nav>
+            <h1>Gabriel Santos Inácio</h1>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <button id="toggleTema">Alternar Tema</button>
+    </header>
+
+    <!--foto de perfil modal-->
+    <section class="apresentacao">
+        <div class="foto-container">
+            <img id="fotoPerfil" src="imagens/gabriel.jpeg" alt="Foto de Perfil de Gabriel Santos Inácio" class="foto-perfil">
+        </div>
+
+        <div id="modal" class="modal">
+            <span class="close" id="closeModal">&times;</span>
+            <div class="modal-inner">
+                <img class="modal-content" id="modalImg" alt="Imagem ampliada de Gabriel Santos Inácio">
+                <div class="modal-caption">Futuro Engenheiro de Software</div>
+            </div>
+        </div>
+
+        <div class="intro">
+            <h2>Olá! Seja bem-vindo(a)! Meu nome é Gabriel.</h2>
+            <p>Além de estudar <strong>Engenharia de Software</strong>, dedico meu tempo à leitura, esportes, pets e alguns hobbies que me ajudam a equilibrar a rotina. Sempre gostei de tecnologia essa ideia me acompanha desde cedo e hoje busco transformar esse interesse em algo real</p>
+            <p id="saudacaoMensagem"></p>
+        </div>
+    </section>
+    
+    <!--Seção com breve Bio-->
+    <section id="sobre">
+        <h2>Jornada acadêmica</h2>
+        <p>Como estudante de Engenharia de Software e gosto de aprender na prática, explorando tudo que envolve automação, sistemas Linux e segurança da informação. Me aprofundei em PowerShell, Shell Script e venho usando o Kali Linux para testar e entender melhor a parte de segurança. Também estudo Python e JavaScript, que me ajudam a dar forma a projetos que conectam o que aprendo com problemas reais. Gosto de desafios que me façam crescer e acredito que tecnologia deve ser útil, simples e acessível.</p>
+        </section>
+
+    <!--Seção com cards, links, botões -->
+    <section id="projetos">
+        <h2>Projetos</h2>
+        <div class="projetos-grid"> <article class="card">
+                <h3>WinRepair4</h3>
+                <p>script de automação para <strong>Windows</strong>, projetado para realizar manutenção abrangente do sistema, otimizar o desempenho e corrigir erros comuns. Desenvolvido em <strong>PowerShell</strong>, ele automatiza rotinas de diagnóstico e reparo, garantindo a estabilidade e a eficiência do sistema operacional.</p>
+                <div class="tecnologias">
+                    <span>PowerShell</span>
+                    <span>Batch</span>
+                    <span>Windows</span>
+                    <span>Automação</span>
+                </div>
+                <a href="https://github.com/Gabriel-S-Inacio/Gabriel-S-Inacio/blob/main/WinRepair4.zip" target="_blank" rel="noopener noreferrer">Ver código no GitHub</a>
+            </article>
+
+            <article class="card">
+                <h3>CyberSec Lab</h3>
+                <p>Criação e gerenciamento de um <strong>laboratório virtual completo para testes de intrusão (pentest)</strong>, contendo múltiplos servidores (Windows e Linux) com vulnerabilidades controladas. Este ambiente permite simular ataques reais, testar ferramentas de segurança e aprofundar conhecimentos em cibersegurança ofensiva e defensiva, garantindo um espaço seguro para experimentação e aprendizado.</p>
+                <div class="tecnologias">
+                    <span>Virtualização</span>
+                    <span>Linux</span>
+                    <span>Windows</span>
+                    <span>Pentest</span>
+                    <span>Metasploit</span>
+                    <span>Nmap</span>
+                    <span>Kali Linux</span>
+                </div>
+                 <a href="" target="_blank" rel="noopener noreferrer">Em breve código no GitHub!</a>
+                </article>
+
+            <article class="card">
+                <h3>Páginas Web</h3>
+                <p>Desenvolvido como um projeto pessoal, este portfólio exemplifica a aplicação de boas práticas em programação. Utilizo ferramentas de Inteligência Artificial para aprimorar a eficiência do desenvolvimento, realizando revisões e depurações assertivas, e elevando a qualidade final do código. </p>
+                <div class="tecnologias">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JS</span>
+                </div>
+                <a href="" target="_blank" rel="noopener noreferrer">Em breve código no GitHub!</a>
+                </article>
+        </div>
+    </section>
+
+<!--Seção de contatos-->
+    <section id="contato">
+        <h2>Contatos</h2>
+        <p>Email: <a href="mailto:gsinacio04@gmail.com">gsinacio04@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/gabrielinacio-dev" target="_blank" rel="noopener noreferrer">linkedin.com/in/gabrielinacio-dev</a></p>
+        <p>GitHub: <a href="https://github.com/Gabriel-S-Inacio" target="_blank" rel="noopener noreferrer">github.com/Gabriel-S-Inacio</a></p>
+        </section>
+
+<!--Seção de cards flutuantes-->
+    <aside class="floating-card left-card">
+        <span class="close-card" data-card="left-card">&times;</span> <img src="imagens/equipeUnipar.jpeg" alt="Gabriel em um evento de tecnologia">
+        <h3>Como profissional</h3>
+        <p>De líder de vendas a futuro Engenheiro de Software. Em transição de carreira, hoje sou Auxiliar Audiovisual na Unipar, aberto a novas experiências sempre em busca de oportunidades</p>
+    </aside>
+
+    <aside class="floating-card right-card">
+        <span class="close-card" data-card="right-card">&times;</span> <img src="imagens/setupGabriel.jpeg" alt="Gabriel trabalhando em um projeto">
+        <h3>Foco na Paixão e no Processo</h3>
+        <p>Aqui é onde a mágica acontece! Meu local de estudo e desenvolvimento, onde cada linha de código ganha vida. A concentração é total... e sim, às vezes uma oração discreta ajuda o código a rodar sem bugs! </p>
+    </aside>
+
+<!--rodapé-->
+    <footer>
+        <p>&copy; 2025 Gabriel Santos Inácio. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
