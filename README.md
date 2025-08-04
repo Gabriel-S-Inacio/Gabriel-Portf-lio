@@ -21,7 +21,7 @@ O portfólio foi construído utilizando as seguintes tecnologias:
 * **Seção "Sobre Mim":** Uma breve introdução sobre minha trajetória e interesses.
 * **Seção "Projetos":** Destaque para os meus melhores trabalhos, com links para os repositórios do GitHub e demonstrações online.
 * **Seção "Habilidades":** Lista das minhas competências técnicas.
-* **Formulário de Contato:** Uma forma simples para visitantes entrarem em contato comigo.
+<!-- * **Formulário de Contato:** Uma forma simples para visitantes entrarem em contato comigo.-->
 
 <!-- ## 🌐 Acesse o Portfólio Online
 
@@ -31,13 +31,12 @@ O portfólio está hospedado e disponível para visualização no link abaixo.
 
 ## 💻 Como Executar o Projeto Localmente
 
-Se você deseja explorar o código ou executar o projeto em sua própria máquina, siga estes passos:
+Se você deseja explorar o código ou executar o projeto em sua própria máquina, siga este passo:
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/](https://github.com/)[Gabriel-S-Inacio]/[pagina-pessoal].git
+    git clone https://github.com/Gabriel-S-Inacio/pagina-pessoal.git
     ```
-
 2.  **Abra o arquivo:**
     Simplesmente abra o arquivo `index.html` em seu navegador web preferido.
 
