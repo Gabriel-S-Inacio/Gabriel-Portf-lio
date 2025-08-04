@@ -35,7 +35,7 @@ Se você deseja explorar o código ou executar o projeto em sua própria máquin
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [https://github.com/](https://github.com/)[Seu-Usuário]/[nome-do-repositorio].git
+    git clone [https://github.com/](https://github.com/)[Gabriel-S-Inacio]/[pagina-pessoal].git
     ```
 
 2.  **Abra o arquivo:**
@@ -45,9 +45,9 @@ Se você deseja explorar o código ou executar o projeto em sua própria máquin
 
 Fique à vontade para entrar em contato comigo!
 
-* **Email:** [seu-email@exemplo.com]
-* **LinkedIn:** [Link para seu perfil do LinkedIn]
+* **Email:** gsinacio04@gmail.com
+* **LinkedIn:** www.linkedin.com/in/gabrielinacio-dev
 
 ---
 
-Feito com ❤️ por [Seu Nome ou Usuário do GitHub]
+Feito com ❤️ por Gabriel-S-Inacio
